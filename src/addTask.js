@@ -3,6 +3,11 @@ const AWS = require('aws-sdk');
 const middy = require('@middy/core');
 const jsonBodyParser = require('@middy/http-json-body-parser');
 
+/**
+ * Add Task
+ * @param {Event} event Http request event
+ * @returns
+ */
 const addTask = async (event) => {
     try {
         const dynamodb = new AWS.DynamoDB.DocumentClient();

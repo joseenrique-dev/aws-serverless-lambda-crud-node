@@ -1,5 +1,10 @@
 const AWS = require('aws-sdk');
 
+/**
+ * Get all task
+ * @param {Event} event Http request event
+ * @returns
+ */
 const getTasks = async (event) => {
     try {
         const dynamodb = new AWS.DynamoDB.DocumentClient();

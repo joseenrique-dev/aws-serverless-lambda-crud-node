@@ -1,5 +1,10 @@
 const AWS = require('aws-sdk');
 
+/**
+ * Remove task by task id
+ * @param {Event} events Http request event
+ * @returns
+ */
 const removeTask = async (events) => {
     try {
         const dynamodb = new AWS.DynamoDB.DocumentClient();

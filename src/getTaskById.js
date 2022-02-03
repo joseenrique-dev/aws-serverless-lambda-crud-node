@@ -1,5 +1,10 @@
 const AWS = require('aws-sdk');
 
+/**
+ * Get a specific task
+ * @param {Event} event Http request event
+ * @returns
+ */
 const getTaskById = async (event) => {
     const { id } = event.pathParameters;
 
