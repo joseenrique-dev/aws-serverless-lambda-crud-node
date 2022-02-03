@@ -39,6 +39,12 @@ functions:
             - httpApi:
                   path: /task/{id}
                   method: get
+    updateTask:
+        handler: src/updateTask.updateTask
+        events:
+            - httpApi:
+                  path: /task/{id}
+                  method: put
 
 resources: # CloudFormation template syntax
     Resources:
