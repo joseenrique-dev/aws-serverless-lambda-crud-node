@@ -33,6 +33,12 @@ functions:
             - httpApi:
                   path: /tasks
                   method: get
+    getTaskById:
+        handler: src/getTaskById.getTaskById
+        events:
+            - httpApi:
+                  path: /task/{id}
+                  method: get
 
 resources: # CloudFormation template syntax
     Resources:
