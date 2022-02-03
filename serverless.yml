@@ -45,6 +45,12 @@ functions:
             - httpApi:
                   path: /task/{id}
                   method: put
+    removeTask:
+        handler: src/removeTask.removeTask
+        events:
+            - httpApi:
+                  path: /task/{id}
+                  method: delete
 
 resources: # CloudFormation template syntax
     Resources:
