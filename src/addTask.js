@@ -1,13 +1,15 @@
-const { v4 } = requiere('uuid');
-const AWS = requiere('aws-sdk');
+const { v4 } = require('uuid');
+const AWS = require('aws-sdk');
 
 const addTask = async (event) => {
-    const dynamodb = new Date();
+    const dynamodb = new AWS.DynamoDB.DocumentClient();
+
     const { title, description } = JSON.parse(event.body);
     const createAt = new Date();
     const id = v4();
 
     const newTask = {
+        id,
         title,
         description,
         createAt,
